@@ -1,6 +1,6 @@
 const usuarios = [];
 
-function registrarUsuario(nombre, email, contra) {
+function registrarUsuario(nombre, email, password) {
 
   // Test 1: Revisa si el mail ya está registrado, de ser así devuelve error
   if (usuarios.find(u => u.email === email)) {
@@ -9,7 +9,7 @@ function registrarUsuario(nombre, email, contra) {
     const nuevoUsuario = {
     nombre,
     email,
-    contraseña: contra,
+    password,
     notas: []
   };
 
