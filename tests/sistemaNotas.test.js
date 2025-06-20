@@ -18,9 +18,9 @@ beforeEach(() => {
 
 // Registra un usuario nuevo correctamente
 test("Registra un usuario nuevo correctamente", () => {
-  const result = registrarUsuario("Paula", "paula@mail.com", "1234");
+  const result = registrarUsuario("Paula", "paula@mail.com");
   expect(result.success).toBe(true);
-  expect(result.usuario.email).toBe("paula@mail.com");
+  expect(result.usuario.email).toBe("paula@mail.com")
 });
 
 // No permite registrar dos usuarios con el mismo email
