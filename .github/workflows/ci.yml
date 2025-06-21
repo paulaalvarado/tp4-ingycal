@@ -1,8 +1,8 @@
 # .github/workflows/ci.yml
 name: CI TP4
 
-on:
-  pull_request:
+on: 
+  pull_request: 
   push:
     branches: [ main ]
 
@@ -17,3 +17,5 @@ jobs:
           node-version: '20'
       - run: npm install
       - run: npm test
+
+    

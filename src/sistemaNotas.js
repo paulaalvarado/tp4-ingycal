@@ -1,6 +1,5 @@
 const usuarios = [];
-
-function registrarUsuario(nombre, email, contrasena) {
+function registrarUsuario(nombre, email, password) {
 
   if (usuarios.find(u => u.email === email)) {
     return { success: false, mensaje: "Email ya registrado" };
