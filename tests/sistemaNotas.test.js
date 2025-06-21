@@ -9,16 +9,14 @@ const {
 
 // Limpiar el estado antes de cada test para evitar interferencias
 beforeEach(() => {
-  // Como usuarios está en memoria, simplemente "reseteamos" recargando el módulo.
   jest.resetModules();
-  // Nota: esto recarga el módulo, pero si necesitás más aislamiento, podés adaptar el modelo.
 });
 
 /** ================== registrarUsuario ================== */
 
 // Registra un usuario nuevo correctamente
 test("Registra un usuario nuevo correctamente", () => {
-  const result = registrarUsuario("Paula", "paula@mail.com", "1234");
+  const result = registrarUsuario("Paula", "paula@mail.com", "12345");
   expect(result.success).toBe(true);
   expect(result.usuario.email).toBe("paula@mail.com")
 });

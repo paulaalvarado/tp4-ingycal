@@ -1,6 +1,6 @@
 const usuarios = [];
 
-function registrarUsuario(nombre, email, password) {
+function registrarUsuario(nombre, email, contrasena) {
 
   if (usuarios.find(u => u.email === email)) {
     return { success: false, mensaje: "Email ya registrado" };
@@ -53,15 +53,13 @@ function agregarNota(email, materia, nota) {
 }
 
 function obtenerNotas(email) {
-  // Buscar usuario por email
+
   const usuario = usuarios.find(u => u.email === email);
   
   if (!usuario) {
-    // Si no existe usuario, devolver lista vacía
     return [];
   }
 
-  // Devolver array de notas del usuario
   return usuario.notas;
 }
 
