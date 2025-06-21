@@ -15,6 +15,11 @@ function registrarUsuario(nombre, email, password) {
     return { success: false, mensaje: "Faltan datos obligatorios" }
   }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return { success: false, mensaje: "Formato de email inválido" };
+  }
+
   usuarios.push(nuevoUsuario);
   return { success: true, usuario: nuevoUsuario };
 }
