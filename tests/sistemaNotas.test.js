@@ -6,7 +6,7 @@ const {
   calcularPromedio,
   estaAprobado
 } = require("../src/sistemaNotas");
-//Prueba nro 1
+
 // Limpia el estado antes de cada test para evitar interferencias
 beforeEach(() => {
   jest.resetModules();
