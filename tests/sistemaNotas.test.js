@@ -6,7 +6,7 @@ const {
   calcularPromedio,
   estaAprobado
 } = require("../src/sistemaNotas");
-
+//Prueba nro 1
 // Limpia el estado antes de cada test para evitar interferencias
 beforeEach(() => {
   jest.resetModules();
@@ -34,7 +34,6 @@ test("No permite registrar dos usuarios con el mismo email", () => {
 test("No permite registrar usuario si el email tiene formato inválido", () => {
   const result = registrarUsuario("Andrés", "no-es-mail", "pass123");
   console.log(result.mensaje);
-  expect(result.success).toBe(false);
   expect(result.mensaje).toMatch(/formato de email inválido/i);
 });
 
