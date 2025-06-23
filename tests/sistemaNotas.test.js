@@ -16,7 +16,7 @@ beforeEach(() => {
 
 // Test 1: Registra un usuario nuevo correctamente
 test("Registra un usuario nuevo correctamente", () => {
-  const result = registrarUsuario("Paula", "paula@mail.com");
+  const result = registrarUsuario("Paula", "paula@mail.com", "1234");
   expect(result.success).toBe(true);
   expect(result.usuario.email).toBe("paula@mail.com")
 });
